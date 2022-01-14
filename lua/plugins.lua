@@ -225,7 +225,14 @@ return require("packer").startup({function()
   }
 
   -- Git support for nvim.
-  use { "rhysd/committia.vim" }
+  use {
+    "rhysd/committia.vim",
+    config = function()
+        vim.cmd [[
+            source ~/.config/nvim/lua/plugins/committia.vim
+        ]]
+    end
+  }
   use {
     "tpope/vim-fugitive",
   }
