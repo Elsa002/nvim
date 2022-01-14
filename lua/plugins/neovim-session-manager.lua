@@ -6,9 +6,6 @@ require('session_manager').setup({
   autoload_mode = require('session_manager.config').AutoloadMode.CurrentDir, -- Define what to do when nevom is started without arguments.
   autosave_last_session = true, -- Automatically save last session on exit.
   autosave_ignore_not_normal = true, -- Plugin will not save a session when no writable and listed buffers are opened.
+  autosave_only_in_session = true, -- Always autosaves session. If true, only autosaves after a session is active.
 })
 
-local present, telescope = pcall(require, "telescope")
-if present then
-    telescope.load_extension('sessions')
-end

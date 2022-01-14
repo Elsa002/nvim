@@ -126,7 +126,7 @@ map("n", "<C-_>", ":CommentToggle<CR>")
 map("v", "<C-_>", ":'<,'>CommentToggle<CR>")
 
 -- Choose a session to load
-map("n", "<Leader>ls", ":Telescope sessions<CR>")
+-- map("n", "<Leader>ls", ":Telescope sessions<CR>")
 
 -- Luasnip maps
 vim.api.nvim_set_keymap("i", "<C-l>", "<Plug>luasnip-next-choice", {})
